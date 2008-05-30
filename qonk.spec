@@ -2,7 +2,7 @@
 # - disable using guichan files included with package
 
 Summary:	Simple solar system build-and-conquer game
-Summary(pl.UTF-8):	Prosta gra typu buduj i zdobywaj
+Summary(pl.UTF-8):	Prosta gra typu "buduj i zdobywaj"
 Name:		qonk
 Version:	0.3.0
 Release:	0.1
@@ -30,14 +30,14 @@ throughout the game, more AI players in bigger systems have to be
 kicked out.
 
 %description -l pl.UTF-8
-Qonk jest mała grą strategiczną typu buduj i zdobywaj z bardzo
-prostymi zasadami. Gra umiejscowiona jest w systemie słonecznym
+Qonk jest mała grą strategiczną typu "buduj i zdobywaj" z bardzo
+prostymi zasadami. Gra umiejscowiona jest w układzie słonecznym
 planet. Celem gracza jest podbicie wszystkich planet przez wysyłanie
-tam statków. Planety, które znajdują się pod kontrolą gracza
+tam statków. Planety, które znajdują się pod kontrolą gracza,
 wytwarzają nowe statki. Zagrożeniem są prości przeciwnicy
-sterowani przez komputer. Im więcej doświadczenia zdobędzie gracz
+sterowani przez komputer. Im więcej doświadczenia zdobędzie gracz,
 tym więcej przeciwników będzie musiał pokonać w coraz większych
-systemach.
+układach.
 
 %prep
 %setup -q
