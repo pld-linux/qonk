@@ -1,0 +1,61 @@
+--- qonk-0.3.1/src/lisp/lexer.cpp~	2007-09-14 05:43:03.000000000 +0000
++++ qonk-0.3.1/src/lisp/lexer.cpp	2009-10-29 12:07:27.000000000 +0000
+@@ -19,6 +19,8 @@
+ //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ #include <sstream>
+ #include <stdexcept>
++#include <stdio.h>
++#include <string.h>
+ 
+ #include "lexer.hpp"
+ #include "translation.hpp"
+--- qonk-0.3.1/src/lisp/lisp.hpp~	2007-09-14 05:43:03.000000000 +0000
++++ qonk-0.3.1/src/lisp/lisp.hpp	2009-10-29 12:12:33.000000000 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <string>
+ #include <vector>
++#include <stdio.h>
+ 
+ namespace lisp
+ {
+--- qonk-0.3.1/src/lisp/parser.cpp~	2007-09-14 05:43:03.000000000 +0000
++++ qonk-0.3.1/src/lisp/parser.cpp	2009-10-29 12:14:35.000000000 +0000
+@@ -20,6 +20,7 @@
+ #include <sstream>
+ #include <stdexcept>
+ #include <fstream>
++#include <cstring>
+ 
+ #include <cassert>
+ 
+--- qonk-0.3.1/src/ui/Makefile.am~	2007-09-14 05:43:03.000000000 +0000
++++ qonk-0.3.1/src/ui/Makefile.am	2009-10-29 12:29:28.000000000 +0000
+@@ -1,6 +1,6 @@
+ AM_CPPFLAGS=-DPKG_DATA_DIR="\"$(pkgdatadir)/\""
+ 
+-INCLUDES = -I$(top_srcdir)/guichan
++INCLUDES = -I$(top_srcdir)/guichan -I$(top_srcdir)/src
+ 
+ noinst_LIBRARIES = libui.a
+ 
+--- qonk-0.3.1/src/menumanager.h~	2009-10-30 11:44:45.000000000 +0000
++++ qonk-0.3.1/src/menumanager.h	2009-10-30 11:52:31.000000000 +0000
+@@ -7,6 +7,8 @@
+ #ifndef MENUMANAGER_H
+ #define MENUMANAGER_H
+ 
++#include <ui/menuaction.h>
++
+ class Main;
+ 
+ class ControlOptions;
+--- qonk-0.3.1/src/videooptions.cpp~	2007-09-14 05:43:03.000000000 +0000
++++ qonk-0.3.1/src/videooptions.cpp	2009-10-30 12:12:00.000000000 +0000
+@@ -1,5 +1,6 @@
+ #include <vector>
+ #include <sstream>
++#include <algorithm>
+ 
+ #include <SDL/SDL.h>
+ 
