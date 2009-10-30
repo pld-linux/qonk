@@ -4,12 +4,14 @@
 Summary:	Simple solar system build-and-conquer game
 Summary(pl.UTF-8):	Prosta gra typu "buduj i zdobywaj"
 Name:		qonk
-Version:	0.3.0
+Version:	0.3.1
 Release:	0.1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/qonk/%{name}-%{version}.tar.gz
-# Source0-md5:	7460e5e1e28fd1e0ed0fa51b1afb138c
+# Source0-md5:	9491980477ac5beb5bba6b8234d2ddfd
+Patch0:		%{name}-headers.patch
+Patch1:		%{name}-malloc.patch
 URL:		http://scratchpad.wikia.com/wiki/Qonk
 BuildRequires:	SDL-devel >= 1.2
 BuildRequires:	SDL_gfx-devel >= 1.2
@@ -17,7 +19,6 @@ BuildRequires:	SDL_image-devel >= 1.2
 BuildRequires:	SDL_ttf-devel >= 2.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -41,7 +42,8 @@ układach.
 
 %prep
 %setup -q
-%{__sed} -i 's@font.ttf@%{_datadir}/%{name}/font.ttf@' src/canvas.cpp
+%patch0 -p1
+%patch1 -p1
 
 %build
 %{__aclocal}
