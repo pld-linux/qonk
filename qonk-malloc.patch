@@ -1,0 +1,28 @@
+--- qonk-0.3.1/src/sdl_driver.cpp~	2009-10-30 12:07:49.000000000 +0000
++++ qonk-0.3.1/src/sdl_driver.cpp	2009-10-30 12:08:09.000000000 +0000
+@@ -5,6 +5,7 @@
+ #include <SDL/SDL.h>
+ #include <SDL/SDL_ttf.h>
+ #include <cstdio>
++#include <stdlib.h>
+ 
+ #include "sdl_driver.h"
+ #include "canvas.h"
+@@ -47,7 +48,7 @@
+     Canvas::initScreen();
+ 
+     const int NUM_STICKS = SDL_NumJoysticks();
+-    sticks = (SDL_Joystick **) std::malloc(sizeof(SDL_Joystick *) * NUM_STICKS);
++    sticks = (SDL_Joystick **) malloc(sizeof(SDL_Joystick *) * NUM_STICKS);
+     for (int i=0;i<NUM_STICKS;i++)
+         sticks[i] = SDL_JoystickOpen(i);
+ 
+@@ -84,7 +85,7 @@
+ {
+   SDL_ShowCursor(SDL_ENABLE);
+ 
+-  std::free(sticks);
++  free(sticks);
+ 
+   Canvas::shutdown();
+ 
