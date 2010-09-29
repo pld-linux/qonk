@@ -8,7 +8,7 @@ Version:	0.3.1
 Release:	0.1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/qonk/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/qonk/%{name}-%{version}.tar.gz
 # Source0-md5:	9491980477ac5beb5bba6b8234d2ddfd
 Patch0:		%{name}-headers.patch
 Patch1:		%{name}-malloc.patch
@@ -35,10 +35,9 @@ Qonk jest mała grą strategiczną typu "buduj i zdobywaj" z bardzo
 prostymi zasadami. Gra umiejscowiona jest w układzie słonecznym
 planet. Celem gracza jest podbicie wszystkich planet przez wysyłanie
 tam statków. Planety, które znajdują się pod kontrolą gracza,
-wytwarzają nowe statki. Zagrożeniem są prości przeciwnicy
-sterowani przez komputer. Im więcej doświadczenia zdobędzie gracz,
-tym więcej przeciwników będzie musiał pokonać w coraz większych
-układach.
+wytwarzają nowe statki. Zagrożeniem są prości przeciwnicy sterowani
+przez komputer. Im więcej doświadczenia zdobędzie gracz, tym więcej
+przeciwników będzie musiał pokonać w coraz większych układach.
 
 %prep
 %setup -q
