@@ -19,6 +19,7 @@ BuildRequires:	SDL_image-devel >= 1.2
 BuildRequires:	SDL_ttf-devel >= 2.0
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
